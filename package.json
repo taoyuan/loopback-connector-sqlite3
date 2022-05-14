@@ -1,9 +1,9 @@
 {
-  "name": "loopback-connector-sqlite3",
+  "name": "loopback-connector-sqlite3e",
   "version": "3.0.0",
-  "description": "Loopback SQLite3 Connector",
+  "description": "An enhanced Loopback SQLite3 Connector",
   "engines": {
-    "node": "10 || 12 || 14 || 16"
+    "node": "10 || 12 || 14 || 16 || 18"
   },
   "keywords": [
     "StrongLoop",
@@ -32,7 +32,7 @@
     "@commitlint/config-conventional": "^16.2.4",
     "bluebird": "^3.7.2",
     "eslint": "^8.15.0",
-    "jscs": "^1.13.1",
+    "jscs": "^1.12.0",
     "loopback-datasource-juggler": "^4.27.1",
     "mktmpdir": "^0.1.1",
     "mocha": "^10.0.0",
@@ -42,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/taoyuan/loopback-connector-sqlite3.git"
+    "url": "https://github.com/taoyuan/loopback-connector-sqlite3e.git"
   },
   "license": "Artistic-2.0"
 }
