@@ -1,6 +1,7 @@
 # loopback-connector-sqlite3
 
-[SQLite](https://sqlite.org/) is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine. This is the official SQLite3 connector module for the LoopBack framework.
+[SQLite](https://sqlite.org/) is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL
+database engine. This is the official SQLite3 connector module for the LoopBack framework.
 
 ## Installation
 
@@ -30,54 +31,58 @@ The model definition consists of the following properties:
 
 ```json
 
-    {"name": "Inventory", "options": {
-      "idInjection": false,
-    }, "properties": {
-      "id": {
-        "type": "String",
-        "required": false,
-        "length": 64,
-        "precision": null,
-        "scale": null
-      },
-      "productId": {
-        "type": "String",
-        "required": false,
-        "length": 20,
-        "precision": null,
-        "scale": null,
-        "id": 1
-      },
-      "locationId": {
-        "type": "String",
-        "required": false,
-        "length": 20,
-        "precision": null,
-        "scale": null,
-        "id": 1
-      },
-      "available": {
-        "type": "Number",
-        "required": false,
-        "length": null,
-        "precision": 32,
-        "scale": 0
-      },
-      "total": {
-        "type": "Number",
-        "required": false,
-        "length": null,
-        "precision": 32,
-        "scale": 0
-      },
-      "createdOn": {
-       "type": "Date",
-        "required": false,
-        "sqlite3": {
-          "dbDefault": "now"
-        }
+{
+  "name": "Inventory",
+  "options": {
+    "idInjection": false
+  },
+  "properties": {
+    "id": {
+      "type": "String",
+      "required": false,
+      "length": 64,
+      "precision": null,
+      "scale": null
+    },
+    "productId": {
+      "type": "String",
+      "required": false,
+      "length": 20,
+      "precision": null,
+      "scale": null,
+      "id": 1
+    },
+    "locationId": {
+      "type": "String",
+      "required": false,
+      "length": 20,
+      "precision": null,
+      "scale": null,
+      "id": 1
+    },
+    "available": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0
+    },
+    "total": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 32,
+      "scale": 0
+    },
+    "createdOn": {
+      "type": "Date",
+      "required": false,
+      "sqlite3": {
+        "dbDefault": "now"
       }
-    }}
+    }
+  }
+}
 
 ```
 

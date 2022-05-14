@@ -15,34 +15,34 @@
   ],
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./ && jscs ./",
-    "pretest": "npm run lint",
+    "lint": "eslint ./",
+    "pretest": "npm run lint && true",
     "test": "nyc --reporter=lcov mocha -R spec -b --timeout 10000 --require test/init.js test/*.test.js"
   },
   "dependencies": {
-    "async": "^2.6.1",
-    "debug": "^3.1.0",
-    "loopback-connector": "^4.5.1",
-    "moment": "^2.10.3",
-    "sqlite3": "^4.0.2",
-    "strong-globalize": "^4.1.1"
+    "async": "^3.2.3",
+    "debug": "^4.3.4",
+    "loopback-connector": "^5.0.1",
+    "moment": "^2.29.3",
+    "sqlite3": "^5.0.8",
+    "strong-globalize": "^6.0.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "bluebird": "^3.5.1",
-    "eslint": "^0.23.0",
+    "@commitlint/cli": "^16.3.0",
+    "@commitlint/config-conventional": "^16.2.4",
+    "bluebird": "^3.7.2",
+    "eslint": "^8.15.0",
     "jscs": "^1.13.1",
-    "loopback-datasource-juggler": "^3.36.1",
+    "loopback-datasource-juggler": "^4.27.1",
     "mktmpdir": "^0.1.1",
-    "mocha": "^5.2.0",
+    "mocha": "^10.0.0",
     "nyc": "^15.1.0",
-    "rc": "^1.0.0",
-    "should": "^8.0.2"
+    "rc": "^1.2.8",
+    "should": "^13.2.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strongloop/loopback-connector-sqlite3.git"
+    "url": "https://github.com/taoyuan/loopback-connector-sqlite3.git"
   },
   "license": "Artistic-2.0"
 }
