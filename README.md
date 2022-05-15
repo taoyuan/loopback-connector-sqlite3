@@ -1,14 +1,21 @@
-# loopback-connector-sqlite3
+# loopback-connector-sqlite3e
 
 [SQLite](https://sqlite.org/) is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL
 database engine. This is the official SQLite3 connector module for the LoopBack framework.
+
+This connector is forked from [loopback-connector-sqlite3](https://github.com/strongloop/loopback-connector-sqlite3) 
+and enhanced with:
+
+- not return lastID when primary key is TEXT type
+- ignore loopback isolation level to use sqlite3 [default(`DEFERRED`)](https://www.sqlite.org/lang_transaction.html) 
+transaction isolation level
 
 ## Installation
 
 Enter the following in the top-level directory of your LoopBack application:
 
 ```
-$ npm install loopback-connector-sqlite3 --save
+$ npm install loopback-connector-sqlite3e --save
 ```
 
 The `--save` option adds the dependency to the application's `package.json` file.
