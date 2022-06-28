@@ -1,5 +1,5 @@
 {
-  "name": "loopback-connector-sqlite3e",
+  "name": "loopback-connector-sqlite3s",
   "version": "3.2.0",
   "description": "An enhanced Loopback SQLite3 Connector",
   "engines": {
@@ -42,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/taoyuan/loopback-connector-sqlite3e.git"
+    "url": "https://github.com/taoyuan/loopback-connector-sqlite3s.git"
   },
   "license": "Artistic-2.0"
 }

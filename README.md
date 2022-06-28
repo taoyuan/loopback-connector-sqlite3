@@ -1,4 +1,4 @@
-# loopback-connector-sqlite3e
+# loopback-connector-sqlite3s
 
 [SQLite](https://sqlite.org/) is a self-contained, high-reliability, embedded, full-featured, public-domain, SQL
 database engine. This is the official SQLite3 connector module for the LoopBack framework.
@@ -15,7 +15,7 @@ transaction isolation level
 Enter the following in the top-level directory of your LoopBack application:
 
 ```
-$ npm install loopback-connector-sqlite3e --save
+$ npm install loopback-connector-sqlite3s --save
 ```
 
 The `--save` option adds the dependency to the application's `package.json` file.
