@@ -13,6 +13,7 @@ require('./init');
 var Schema = require('loopback-datasource-juggler').Schema;
 
 var UserData;
+var UniqueData;
 var db;
 
 /* global describe, before, it, getDataSource */
@@ -106,6 +107,41 @@ describe('migrations', function() {
       should.not.exists(err);
       expected.should.be.eql(fields);
       done();
+    });
+  });
+
+  it('UniqueData does not accept duplicates', function(done){
+    UniqueData.create({
+      first: 'value1',
+      second: 'value1',
+      third: 'value2'
+    }, function(err){
+      // make sure that there is no error
+      assert.ok(!err, 'Could not create UserData: ' + err);
+
+      // try to create a new record with a duplicate
+      // 'first' attribute
+      UniqueData.create({
+        first: 'value1',
+        second: 'value3',
+        third:
+        'value4'
+      }, function(err){
+        assert.ok(err, 'duplicate "data" attributes');
+        done();
+      });
+
+      // try to create a new record with a duplicate
+      // tuple (second, third)
+      UniqueData.create({
+        first: 'value4',
+        second: 'value1',
+        third: 'value2'
+      }, function(err){
+        assert.ok(err, 'duplicate "data" attributes');
+        done();
+      });
+
     });
   });
 
@@ -216,6 +252,30 @@ function setup(done) {
     dateTime: {type: Date, dataType: 'datetime'},
     timestamp: {type: Date, dataType: 'timestamp'}
   });
+
+  UniqueData = db.define('UniqueData', {
+    first: {
+      type: String,
+      index: {
+        unique: true
+      }
+    },
+    second: String,
+    third: String,
+  }, {
+    indexes: {
+      index0: {
+        keys: {
+          second: 1,
+          third: 1
+        },
+        options: {
+          unique: true
+        }
+      }
+    }
+  });
+
   done();
 }
 
