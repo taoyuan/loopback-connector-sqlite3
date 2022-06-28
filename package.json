@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-sqlite3s",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "An enhanced Loopback SQLite3 Connector",
   "engines": {
     "node": "10 || 12 || 14 || 16 || 18"
