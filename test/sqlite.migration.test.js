@@ -22,7 +22,7 @@ describe('migrations', function() {
 
   before(setup);
 
-  it('should run migration', function(done) {
+  before(function(done) {
     db.automigrate(function() {
       done();
     });
