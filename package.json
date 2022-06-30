@@ -3,7 +3,7 @@
   "version": "3.3.0",
   "description": "An enhanced Loopback SQLite3 Connector",
   "engines": {
-    "node": "10 || 12 || 14 || 16 || 18"
+    "node": "16 || 18"
   },
   "keywords": [
     "StrongLoop",
@@ -20,7 +20,7 @@
     "test": "nyc --reporter=lcov mocha -R spec -b --timeout 10000 --require test/init.js test/*.test.js"
   },
   "dependencies": {
-    "async": "^3.2.3",
+    "async": "^3.2.4",
     "debug": "^4.3.4",
     "loopback-connector": "^5.0.1",
     "moment": "^2.29.3",
@@ -28,10 +28,10 @@
     "strong-globalize": "^6.0.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.3.0",
-    "@commitlint/config-conventional": "^16.2.4",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "bluebird": "^3.7.2",
-    "eslint": "^8.15.0",
+    "eslint": "^8.18.0",
     "jscs": "^1.12.0",
     "loopback-datasource-juggler": "^4.27.1",
     "mktmpdir": "^0.1.1",
